@@ -7,7 +7,7 @@ const client = new github.GitHub(token)
 async function main() {
     const pullsResponse = await client.pulls.list({
         ...github.context.repo,
-        base: 'master',
+        base: 'develop',
         state: 'open',
     })
     const prs = pullsResponse.data
